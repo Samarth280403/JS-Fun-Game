@@ -1,0 +1,314 @@
+*{
+    position:relative;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('bg1.jpg');
+    background-size: cover;  
+    position: fixed;
+    /* background-image: linear-gradient(#000e2e,#036b79); */
+    /* background: #f953c6;
+    background: -webkit-linear-gradient(to right,#b91d73,#f953c6);
+    background: linear-gradient(to right,#b91d73,#f953c6); */
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    margin:7%;
+}
+
+.container .gameTitle{
+    text-align: center;
+    color: #fff;
+    font-size: 4rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+.gameBox{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.gameBox .inputBox{
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.gameBox .inputBox input{
+    text-align: center;
+    position: relative;
+    border: 2px solid white;
+    overflow: none;
+    padding: 6px;
+    font-size: 1.3rem;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background:transparent;
+    border-radius: 5px;
+    color:white ;
+    margin: 0.4rem;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    text-align: center;
+    opacity: 0.8; 
+  }
+
+.buttonBox{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.buttonBox button{
+    display: block;
+    outline: none;
+    border: 2px solid #fff;
+    height: 50px;
+    width: 170px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 8px;
+    background: white;
+    border: 1px solid white;
+    color: rgb(233, 99, 45);
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    padding: 3px;
+}
+
+.buttonBox button img{
+    width: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    /* display: none; */
+}
+
+
+.buttonBox button#tryAgainBtn{
+    display: none;
+}
+
+.matchResultBox{
+    position: relative;
+    width: 600px;
+    margin: 2rem;
+    margin-left: 29%;
+    text-align: center;
+    justify-content: center;
+    background: transparent;
+    border: 3px dashed white;
+    padding: 6px;
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 600;
+    font-family: 'Indied Flower',cursive;
+    border-radius: 8px;
+    visibility: hidden;
+}
+
+.matchResultBox.visible{
+    visibility: visible;
+}
+
+.bubbles img{
+    width: 50px;
+    animation: bubble 7s linear infinite ;
+}
+
+.bubbles{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    bottom: -100px;
+}
+
+.icon{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;   
+}
+
+.icon img{
+    height: 22px;
+    padding: 0 8px;
+}
+
+.name{
+    padding: 3px;
+    display:flex;
+    color: white;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.name h4{
+    font-size: 16px;
+}
+
+@keyframes bubble {
+    0%{
+        transform: translateY(0);
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.4;
+    }
+    70%{
+        opacity: 0.5;
+    }
+    100%{
+        transform: translateY(-95vh);
+        opacity: 0;
+    }
+}
+
+.bubbles img:nth-child(1){
+    animation-delay: 2s;
+    width: 45px;
+}
+.bubbles img:nth-child(2){
+    animation-delay: 1s;
+    width: 50px;
+}
+.bubbles img:nth-child(3){
+    animation-delay: 3s;
+    width: 59px;
+}
+.bubbles img:nth-child(4){
+    animation-delay: 4.5s;
+    width: 55px;
+}
+.bubbles img:nth-child(5){
+    animation-delay: 3.3s;
+    width: 40px;
+}
+.bubbles img:nth-child(6){
+    animation-delay: 6s;
+    width: 60px;
+}
+.bubbles img:nth-child(7){
+    animation-delay: 4s;
+    width: 42px;
+}
+.bubbles img:nth-child(8){
+    animation-delay: 1.6s;
+    width: 53px;
+}
+.bubbles img:nth-child(9){
+    animation-delay: 2s;
+    width: 45px;
+}
+
+@media screen and (max-width:600px)
+{
+    *{
+        position:relative;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+       
+    html, body{
+        /* background-image: linear-gradient(#000e2e,#004f5a); */
+        background-image: url('bg2.jpg');
+        background-size: cover;
+        position: fixed;
+        /* background-image: linear-gradient(#011135,#047685); */
+    }
+
+    .container{
+        position: relative;
+        width: 100%;
+        margin: 18%;
+    }
+   
+    .gameBox{
+        flex-direction: column;
+    }
+    .gameBox .inputBox{
+        padding: 4px;
+    }
+
+    
+    .gameBox .inputBox input{
+        text-align: center;
+        font-size: 1.1rem;
+        font-weight: 600;
+        border: 3px solid white;
+    }
+    
+
+    .container .gameTitle{
+        font-size: 3.8rem;
+        font-weight: 500;
+    }
+
+    ::placeholder { 
+        color: white;
+        text-align: center;
+        font-size: 1.2rem;
+        font-weight: 450; 
+     }
+
+     .buttonBox button{
+        border: 3px solid white;
+        background:transparent;
+        color: white;
+        font-weight: 700;
+     }
+
+    .matchResultBox{
+        width: 300px;
+        margin-left: 10%;
+    }
+
+    .matchResultBox.visible{
+        visibility: visible;
+    }
+
+    @keyframes bubble {
+        0%{
+            transform: translateY(0);
+            opacity: 0;
+        }
+        40%{
+            opacity: 0.1;
+        }
+        50%{
+            opacity: 0.2;
+        }
+        75%{
+            opacity: 0.2;
+        }
+        100%{
+            transform: translateY(-95vh);
+            opacity: 0;
+        }
+    }
+    
+}
