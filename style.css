@@ -16,10 +16,6 @@ html, body{
     background-image: url('bg1.jpg');
     background-size: cover;  
     position: fixed;
-    /* background-image: linear-gradient(#000e2e,#036b79); */
-    /* background: #f953c6;
-    background: -webkit-linear-gradient(to right,#b91d73,#f953c6);
-    background: linear-gradient(to right,#b91d73,#f953c6); */
 }
 
 .container{
