@@ -3,21 +3,15 @@
  function getMatch(match){
      return{
          0 : 'are Self Lovers',
-         1 : 'are secret lovers',
+         1 : 'are best Friends',
          2 : 'are Lovers',
-         3 : 'have Affection for each other',
+         3 : 'are Enemies',
          4 : 'will get Marry',
-         5 : 'are Enemies',
+         5 : 'have Affection for each other',
          6 : 'are Friends',
-         7 : 'are best Friends'
+         7 : 'are secret lover'
      }[match]
  }
-// console.log(getMatch(1));
-// console.log(getMatch(2));
-// console.log(getMatch(3));
-// console.log(getMatch(4));
-// console.log(getMatch(5));
-// console.log(getMatch(6));
 
 var arr=[];
 var randomTime=Math.floor(Math.random()*(3000-1000 + 1)+1000);
